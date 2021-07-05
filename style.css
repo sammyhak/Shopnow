@@ -1,0 +1,663 @@
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/*nav bar */
+nav{
+  display: flex;
+  height: 50;
+  position: sticky;
+  top: 0;
+  background: #1b1b1b;
+  color: #ffe7d0;
+  width: 100%;
+  padding: auto 10px;
+}
+/*mobile nav*/
+.navicons{
+  float: right;
+  position: relative;
+  padding: 0px 3px;
+display:flex;
+align-items:center;
+}
+/*desktop nav*/
+.desktop{
+  float: right;
+  position: relative;
+  padding: 0px 3px;
+display:flex;
+align-items:center;
+}
+.menu {  
+  font-size: 25px;
+  display: flex;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.search,
+.cart,
+.profile {
+  font-size: 20px;
+  display: inline;
+  padding: 10px;
+  flex-grow: 1;
+  color:#ffe7d0;
+}
+.profile a{
+color:#ffe7d0;
+cursor:none;}
+.profile a:hover{
+color:#ffe7d0;}
+.top-menus {
+  flex-grow: 1;
+  padding: 10px;
+}
+.name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  float: left;
+}
+.name h1{
+line-height:40px ;}
+/*destop view*/
+/* The dropdown container */
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  color:#ffe7d0;
+height:100%;
+width:100px;
+background:transparent;
+font-size:40px;
+position:relative;
+display:flex;
+justify-content:center;
+margin:0px 5px;
+}
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background:#1b1b1b;
+  border-radius:10px;
+  width: 250px;
+  padding:10px 5px;
+  z-index: 1;
+  transition:1s
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* The side navigation menu */
+.sidenav {
+  height: 100%;
+width:0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+.content-wrap-contain{
+padding:0px 5px 10px 25px;}
+.category-wrapper p{
+font-size:20px;
+color:#ffe7d0;}
+/* The navigation menu links */
+.category{
+  color: #ffe7d0;
+  transition: 0.3s;
+  margin:20px 0px;
+  font-size:10px;
+  padding-left:5px;
+}
+.category:hover{
+border-left:2px solid #ffe7d0;
+font-size:15px;}
+.sidenav .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    margin-left: 50px;
+   color:#ffffff;
+}
+.closebtn:hover{
+color:#A9A9A9;}
+/*search box*/
+/* The overlay effect with black background */
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+}
+.searcharea {
+  height: 50px;
+  width: 90%;
+  border-radius: 8px;
+  background: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.searchbox {
+  width: 80%;
+  height: 100%;
+  border-radius: 20px 0px 0px 20px;
+  outline: none;
+  padding: 10px;
+  float: left;
+  border: none;
+  font-size: 15px;
+}
+.searchbox:hover {
+  background: #c4c4c4;
+}
+.searcharea button:hover {
+  background: #bbb;
+}
+.searcharea button {
+  width: 20%;
+  height: 100%;
+  outline: none;
+  border-radius: 0px 20px 20px 0px;
+  background: #ffffff;
+  font-size: 20px;
+  border: none;
+}
+/* Close button */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+/* Slideshow container */
+.slideshow-wrapper{
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.slide-container{
+  display: none;
+}
+.slide-container img{
+width:100%;}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* The dots/bullets/indicators */
+.point {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .point:hover {
+  background-color: #000000;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+ /*homepage cards*/
+.pictures{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: auto;
+  padding:0px 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.product-image{
+  box-shadow:1px 1px 5px 2px #7E7E7E;
+  height:350px;
+  overflow:hidden;
+}
+.product-image p{
+  cursor: pointer;
+   height:14.3%;
+  text-transform: capitalize;
+  text-align:left;
+  padding:5px 10px;
+  font-size:20px;
+}
+.product-image img {
+ width: 100%;
+  height:85.7%;
+ object-fit: cover;
+ transition:all .5s ease-in-out;
+transform-origin:right;
+}
+.product-image:hover img{
+transform:scale(1.5);}
+
+.brand {
+  display: grid;
+  grid-gap: 10px;
+  margin: 30px 10px 20px;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.brands-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.brands-container img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+.brands-container div {
+  text-align: center;
+}
+.brands-container h2 {
+  margin: 15px;
+}
+.brands-container a {
+    font-size: 20px;
+    padding: 15px;
+    text-decoration: none;
+    border: 2px solid #1b1b1b;
+    color: #1b1b1b;
+    border-radius: 6px;
+    margin: 10px;
+    line-height: 1;
+}
+.brands-container a:hover {
+    background: #fc6e20;
+}
+
+.footermobile{
+height:50px;
+background: #434343;
+  color: #ffe7d0;
+display:flex;
+align-items:center;
+bottom:0px;
+padding:0px 10px;
+font-size:12px;
+}
+.copyright{
+height:100%;
+text-align:left;
+width:30%;
+flex-grow:1;
+line-height:50px;}
+.terms{
+display:flex;
+width:auto;
+height:60%;
+padding-top:5px;
+text-align:center;}
+.privacy{
+padding-right:5px;}
+.con{
+padding-left:5px;}
+/*login and sign in*/
+.sign-in-nav{
+color:#ffe7d0;
+background:#1b1b1b;
+text-align:center;
+height:100px;
+margin-bottom:30px;
+line-height:100px;}
+ /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: none;
+  background-color: #f1f1f1;
+height:70px;
+align-items:center;
+display:flex;
+}
+/* buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  padding:auto;
+  transition: 0.3s;
+width:40%;
+margin:auto;
+font-size:30px;
+font-weight:bold;
+height:70%;
+color:#1b1b1b;
+transition: 0.5s all;
+}
+
+.tab button:hover{
+font-size:25px;
+text-decoration:underline;
+}
+/*Style the tab content 
+tabcontent1 is the sign in tab while tabcontent2 is the login tab */
+.tabcontent1,.tabcontent2 {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  animation: fadeEffect 2s; 
+}
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.tabcontent2{
+display:none;}
+/*tab inputs*/
+.input,.social{
+width:90%;
+height:50px;
+margin:20px auto;
+border-radius:5px;
+border:2px solid #1b1b1b;}
+.input i{
+margin-left:10px;
+font-size:25px;}
+.input input{
+height:100%;
+outline:none;
+width:80%;
+padding-left:10px;
+background:transparent;
+font-size:20px;
+cursor:pointer;
+border:none;}
+.input input::placeholder{
+font-size:16px;
+}
+.tabcontent1 button,.tabcontent2 button{
+width:90%;
+height:50px;
+margin:20px auto;
+border-radius:5px;
+border:none;
+color:#ffffff;
+font-size:20px;
+font-weight:bold;
+display:block;
+background:#000000;}
+.tabcontent2 a,.tabcontent1 p,.tabcontent2 p{
+display:block;
+text-align:center;
+text-decoration:none;
+margin:15px;
+color:#000000;
+cursor:none;
+font-weight:bold;}
+.tabcontent2 p{
+font-size:20px;}
+.social span{
+display:block;
+text-align:center;
+text-decoration:none;
+margin:15px;
+color:#000000;
+cursor:none;
+font-weight:bold;
+font-size:19px; }
+
+/*item page style*/
+ .product-wrapper{
+height:auto;
+width:100%;
+display:grid;
+grid-template-rows:auto;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+
+/*product page*/
+.product-grid{
+display:grid;
+grid-gap:10px;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+grid-template-rows:auto;
+margin:20px 10px;}
+.item{
+  box-shadow:1px 1px 5px 2px #7E7E7E;
+  height:auto;
+  overflow:hidden;
+  color:#000000;
+}
+.link{
+text-decoration:none;}
+.link:hover .item{
+background:#353535;
+color:#ffffff;}
+.item img{
+object-fit:cover;
+width:100%;
+height:300px;}
+.item .detail{
+padding:10px;
+}
+.detail h4{
+font-size:20px;}
+.detail span{
+font-size:20px;
+font-weight:500;
+color:#ff2020;
+display:block;}
+/*item page2*/
+/*item page slide show*/
+.upicons{
+display:flex;
+margin:10px 20px;
+justify-content:space-between;
+background:transparent;
+position:absolute;
+width:90%;
+top:0;
+
+}
+.back,.like{
+width:40px;
+height:40px;
+font-size:20px;
+box-shadow:1px 1px 3px 1px #5B5B5B;
+display:flex;
+color:#ffe7d0;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+background:#1b1b1b;
+transition:.5s;}
+.back:hover{
+background:#ffe7d0;
+color:#1b1b1b;}
+.like:hover{
+animation:show 1s;
+}
+@keyframes show{
+0%{
+font-size:20px;
+}
+50%{
+font-size:25px;
+}
+100%{
+font-size:20px;}}
+/*item details*/
+.product-contain{
+padding:10px;}
+.product-name-price{
+display:flex;
+justify-content:space-between;}
+.product-name-price h4{
+color:#ff2020;}
+.select{
+margin:10px 0;
+width:100%;
+height:45px;
+outline:none;
+font-weight:bold;
+background:none;}
+.quantity-and-add{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+position:sticky;
+bottom:0;
+}
+.quantity button,.quantity input{
+border:none;
+border-radius:5px;
+outline:none;
+width:45px;
+font-weight:bold;
+height:45px;}
+.min-btn{
+}
+.add button{
+background:#fc6e20;
+width:100%;
+border:none;
+border-radius:10px;
+height:45px;
+color:#ffffff;
+outline:none;
+transition:1s;}
+.add button:hover{
+background:#030600;}
+/*mobile style*/
+@media screen and (max-width: 600px){
+  .top-menus{
+    padding: 5px;
+  }  
+  .name h1{
+    font-size: 20px;
+  }
+   .product-image{
+    width: 100%;
+    height: 280px;
+  }
+.desktop{
+display:none;}
+.item img{
+height:270px;}
+}
+/*Destop style*/
+@media screen and (min-width:600px){
+nav{
+height:70px;}
+.name h1{
+line-height:50px;}
+  .menu,.navicons{
+    display: none;
+  } 
+.name h1{
+margin-left:15px;}
+.input,.social,.tabcontent1 button,.tabcontent2 button{
+width:60%;
+}
+.product-grid{
+grid-template-columns:repeat(3,1fr);
+}
+.footermobile{
+display:none;}
+.desktop-search{
+width:500px;
+height:40px;
+border-radius:10px;
+margin:7px 10px 5px;
+background:#CFCFCF;}
+.desktop-search input{
+border-radius:20px 0px 0px 20px;
+padding-left:20px;
+outline:none;
+background:transparent;
+width:90%;
+height:100%;
+border:none;}
+.desktop-search button{
+height:100%;
+width:10%;
+color:#000000;
+border:none;
+border-radius:0px 20px 20px 0px;
+background:transparent;
+font-size:20px;
+float:right;}
+.desktop-search button:hover{
+background:#646464;}
+.cart,.profile{
+margin:0px 2px;
+font-size:40px;}
+/*item card on product page*/
+.item img{
+transition:.5s all ease-in-out;}
+.item:hover img{
+transform:scale(1.5);}
+.item .detail{
+display:flex;}
+.item h4{
+flex-grow:1;}
+}
