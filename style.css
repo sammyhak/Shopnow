@@ -339,7 +339,7 @@ transform:scale(1.5);}
 
 
 .footermobile{
-height:20px;
+height:50px;
 background: #1b1b1b;
 color: #ffe7d0;
 display:flex;
@@ -347,6 +347,8 @@ align-items:space-between;
 justify-content:space-between;
 bottom:0px;
 padding:10px;
+font-size:12px;
+margin-bottom:-1;
 }
 .copyright{
 text-align:left;
