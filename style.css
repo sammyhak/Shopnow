@@ -337,32 +337,30 @@ transform:scale(1.5);}
     background: #fc6e20;
 }
 
+
 .footermobile{
-height:50px;
-background: #434343;
-  color: #ffe7d0;
+height:20px;
+background: #1b1b1b;
+color: #ffe7d0;
 display:flex;
-align-items:center;
+align-items:space-between;
+justify-content:space-between;
 bottom:0px;
-padding:0px 10px;
-font-size:12px;
+padding:10px;
 }
 .copyright{
-height:100%;
 text-align:left;
-width:30%;
-flex-grow:1;
-line-height:50px;}
+}
 .terms{
 display:flex;
-width:auto;
-height:60%;
-padding-top:5px;
-text-align:center;}
+}
 .privacy{
-padding-right:5px;}
+padding-right:5px;
+border-right:1px solid #ffe7d0;}
 .con{
 padding-left:5px;}
+
+
 /*login and sign in*/
 .sign-in-nav{
 color:#ffe7d0;
